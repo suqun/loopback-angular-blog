@@ -1,0 +1,31 @@
+{
+  "name": "Category",
+  "plural": "category",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "parent_id": {
+      "type": "string",
+      "required": true
+    },
+    "is_leaf": {
+      "type": "boolean",
+      "required": true
+    },
+    "deleted": {
+      "type": "boolean",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}

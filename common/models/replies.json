@@ -1,0 +1,49 @@
+{
+  "name": "Replies",
+  "plural": "replies",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "content": {
+      "type": "string",
+      "required": true
+    },
+    "article_id": {
+      "type": "string",
+      "required": true
+    },
+    "author_id": {
+      "type": "string",
+      "required": true
+    },
+    "create_at": {
+      "type": "date",
+      "required": true
+    },
+    "update_at": {
+      "type": "date",
+      "required": true
+    },
+    "content_is_html": {
+      "type": "string",
+      "required": false
+    },
+    "deleted": {
+      "type": "boolean",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "article": {
+      "type": "belongsTo",
+      "model": "Article",
+      "foreignKey": "article_id"
+    }
+  },
+  "acls": [],
+  "methods": []
+}

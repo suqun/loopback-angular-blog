@@ -1,0 +1,61 @@
+{
+  "name": "Article",
+  "plural": "article",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "string",
+      "required": true
+    },
+    "author_id": {
+      "type": "string",
+      "required": true
+    },
+    "reply_count": {
+      "type": "number"
+    },
+    "visit_count": {
+      "type": "number"
+    },
+    "collect_count": {
+      "type": "number"
+    },
+    "create_at": {
+      "type": "date",
+      "required": true
+    },
+    "update_at": {
+      "type": "date",
+      "required": true
+    },
+    "content_is_html": {
+      "type": "boolean"
+    },
+    "category_id": {
+      "type": "string",
+      "required": true
+    },
+    "deleted": {
+      "type": "boolean",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "category": {
+      "type": "belongsTo",
+      "model": "Category",
+      "foreignKey": "category_id"
+    }
+  },
+  "acls": [],
+  "methods": []
+}
