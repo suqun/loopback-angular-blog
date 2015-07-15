@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!--<meta charset="utf-8">-->
-    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>LoopBack Angular Blog</title>
 
     <!--<link rel="stylesheet" href="css/normalize.css"/>-->
     <!-- Bootstrap -->
     <link href="vendor/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/blog.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,32 +19,82 @@
     <![endif]-->
   </head>
   <body ng-app="app">
-    <header>
-
-    </header>
-    <div class="content">
-
-    </div>
-    <footer>
-
-    </footer>
-
-
-
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">LoopBack Angular example</a>
-        </div>
-      </div>
-    </div>
-
+  <div class="blog-masthead">
     <div class="container">
-      <div ui-view></div>
-      <!--<a ui-sref="state1">State 1</a>-->
-      <!--<a ui-sref="state2">State 2</a>-->
+      <nav class="blog-nav">
+        <a class="blog-nav-item active" href="#">Home</a>
+        <a class="blog-nav-item" href="#">New features</a>
+        <a class="blog-nav-item" href="#">Press</a>
+        <a class="blog-nav-item" href="#">New hires</a>
+        <a class="blog-nav-item" href="#">About</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="blog-header">
+      <h1 class="blog-title">The Bootstrap Blog</h1>
+      <p class="lead blog-description">The official example template of creating a blog with Bootstrap.</p>
     </div>
 
+    <div class="row">
+
+      <div class="col-sm-8 blog-main">
+
+        <div ui-view></div>
+
+        <nav>
+          <ul class="pager">
+            <li><a href="#">Previous</a></li>
+            <li><a href="#">Next</a></li>
+          </ul>
+        </nav>
+
+      </div><!-- /.blog-main -->
+
+      <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+        <div class="sidebar-module sidebar-module-inset">
+          <h4>About</h4>
+          <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+        </div>
+        <div class="sidebar-module">
+          <h4>Archives</h4>
+          <ol class="list-unstyled">
+            <li><a href="#">March 2014</a></li>
+            <li><a href="#">February 2014</a></li>
+            <li><a href="#">January 2014</a></li>
+            <li><a href="#">December 2013</a></li>
+            <li><a href="#">November 2013</a></li>
+            <li><a href="#">October 2013</a></li>
+            <li><a href="#">September 2013</a></li>
+            <li><a href="#">August 2013</a></li>
+            <li><a href="#">July 2013</a></li>
+            <li><a href="#">June 2013</a></li>
+            <li><a href="#">May 2013</a></li>
+            <li><a href="#">April 2013</a></li>
+          </ol>
+        </div>
+        <div class="sidebar-module">
+          <h4>Elsewhere</h4>
+          <ol class="list-unstyled">
+            <li><a href="https://github.com/">GitHub</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ol>
+        </div>
+      </div><!-- /.blog-sidebar -->
+
+    </div><!-- /.row -->
+
+  </div><!-- /.container -->
+
+  <footer class="blog-footer">
+    <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+    <p>
+      <a href="#">Back to top</a>
+    </p>
+  </footer>
     <script src="vendor/jquery/dist/jquery.js"></script>
     <script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
     <script src="vendor/angular/angular.js"></script>
@@ -52,8 +102,9 @@
     <script src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="js/services/lb-services.js"></script>
     <script src="js/services/category-services.js"></script>
+    <script src="js/services/article-services.js"></script>
     <script src="js/app.js"></script>
     <script src="js/controllers/category.js"></script>
-
+    <script src="js/controllers/article.js"></script>
   </body>
 </html>
