@@ -12,7 +12,13 @@ module.factory('Article', ['$resource', function($resource) {
                 isArray: true,
                 url: urlBase + "/article",
                 method: "GET"
-              }
+              },
+
+          "findIncludeUser": {
+              url: urlBase + "/article?filter[include]=user",
+              method: "GET",
+              isArray:true
+          }
       });
 }]);
 

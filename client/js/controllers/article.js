@@ -8,7 +8,7 @@ angular
         $scope.articles = [];
         function getArticles() {
             Article
-                .find()
+                .findIncludeUser()
                 .$promise
                 .then(function (results) {
                     $scope.articles = results;

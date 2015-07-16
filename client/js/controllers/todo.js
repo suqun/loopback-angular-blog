@@ -33,15 +33,4 @@ angular
           getTodos();
         });
     };
-  }]).controller('CategoryCtrl', ['$scope', '$state', 'Category', function ($scope, $state, Category) {
-      $scope.categories = [];
-      function getCategories() {
-        Category
-            .find()
-            .$promise
-            .then(function (results) {
-              $scope.categories = results;
-            })
-      }
-      getCategories();
-    }]);
+  }]);

@@ -8,16 +8,16 @@ angular
     .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider,
                                                                $urlRouterProvider) {
         $stateProvider
-            .state('category', {
-                url: 'category',
-                templateUrl: 'views/category/category.html',
-                controller: 'CategoryCtrl'
-            }).state('article', {
+            .state('index', {
                 url: '',
-                templateUrl: 'views/article/index.html',
+                templateUrl: 'views/article/list.html',
                 controller: 'ArticleCtrl'
+            })
+            .state('blogging', {
+                url: '/blogging',
+                templateUrl: 'views/article/blogging.html'
             });
 
 
-        $urlRouterProvider.otherwise('article');
+        $urlRouterProvider.otherwise('index');
     }]);

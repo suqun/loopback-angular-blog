@@ -54,6 +54,11 @@
       "type": "belongsTo",
       "model": "Category",
       "foreignKey": "category_id"
+    },
+    "user": {
+      "type": "belongsTo",
+      "model":"User",
+      "foreignKey":"author_id"
     }
   },
   "acls": [],
