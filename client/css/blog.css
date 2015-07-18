@@ -164,3 +164,16 @@ h6, .h6 {
 .blog-footer p:last-child {
   margin-bottom: 0;
 }
+
+/*
+ * blogging
+ */
+.post-button
+{
+  margin-bottom: 10px;
+}
+.post-button-right
+{
+  position: relative;
+  right: -370px;
+}

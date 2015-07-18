@@ -15,4 +15,16 @@ angular
                 })
         }
         getArticles();
+
+        $scope.addArticle = function (){
+            console.log("creating a new article...");
+            Article
+                .create($scope.newArticle)
+                .$promise
+                .then(function(aticle){
+                    $scope.newArticle = '';
+                    $scope.articleForm.content.$setPristine();
+                });
+        };
+
     }]);

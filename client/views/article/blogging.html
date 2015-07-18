@@ -1,3 +1,59 @@
-<div>
-    <h1>hello world !</h1>
+<div class="blog-header">
+    <h1 class="blog-title">Create a new Blog</h1>
+    <p class="lead blog-description">The official example template of creating a blog with Bootstrap.</p>
+</div>
+<div class="row">
+    <div class="col-md-3">
+        <div class="sidebar-module blog-sidebar">
+            <h4>Author</h4>
+
+            <p>Larry</p>
+        </div>
+        <div class="sidebar-module blog-sidebar">
+            <h4>TAGS</h4>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label class="sr-only">tag</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Enter your tags"/>
+                        <span class="input-group-btn">
+                            <button class="btn btn-default">add</button>
+                        </span>
+                    </div>
+                </div>
+            </form>
+            <p>angular loopback</p>
+        </div>
+        <div class="sidebar-module blog-sidebar">
+            <h4>CATEGORIES</h4>
+            <form class="form-inline">
+                <div class="from-group">
+                    <label class="sr-only">category</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Enter your categories"/>
+                        <span class="input-group-btn">
+                            <button class="btn btn-default">add</button>
+                        </span>
+                    </div>
+
+                </div>
+            </form>
+            <p>NodeJs</p>
+        </div>
+    </div>
+    <div class="col-md-8 col-md-offset-1">
+        <form name="articleForm" novalidate ng-submit="addArticle()">
+            <div class="form-group">
+                <label>Title</label>
+                <input type="text" class="form-control" placeholder="Title" ng-model="newArticle.title" autocomplete="off" required/>
+                <label>Content</label>
+                <textarea rows="10" class="form-control" ng-model="newArticle.content" required></textarea>
+            </div>
+            <div class="post-button">
+                <button class="btn btn-default">Preview</button>
+                <button class="btn btn-default post-button-right">Publish</button>
+                <button class="btn btn-info post-button-right" ng-disabled="articleForm.$invalid">Save Draft</button>
+            </div>
+        </form>
+    </div>
 </div>
