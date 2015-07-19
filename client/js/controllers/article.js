@@ -4,7 +4,7 @@
  */
 angular
     .module('app')
-    .controller('ArticleCtrl', ['$scope', '$state', 'Article', function ($scope, $state, Article) {
+    .controller('ArticleController', ['$scope', '$state', 'Article', function ($scope, $state, Article) {
         $scope.articles = [];
         function getArticles() {
             Article
@@ -16,14 +16,24 @@ angular
         }
         getArticles();
 
-        $scope.addArticle = function (){
+        $scope.addArticle  = function() {
             console.log("creating a new article...");
+            var newArticle = $scope.newArticle;
+            newArticle.author_id = "55a66ce8c647245c0f7f06b4";
+            newArticle.create_at = "2015-07-18 23:34:12";
+            newArticle.update_at = "2015-07-18 23:34:12";
+            newArticle.category_id = "1";
+            newArticle.deleted = "false";
+            console.log(newArticle);
             Article
-                .create($scope.newArticle)
+                .create(newArticle)
                 .$promise
                 .then(function(aticle){
-                    $scope.newArticle = '';
-                    $scope.articleForm.content.$setPristine();
+                    console.log($setPristine());
+                    console.log("a new article created");
+
+                    //$scope.newArticle = '';
+                    //$scope.articleForm.content.$setPristine();
                 });
         };
 

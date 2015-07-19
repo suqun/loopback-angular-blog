@@ -7,7 +7,7 @@ angular
     //.controller('CategoryCtrl', ['$scope', function ($scope) {
     //    $scope.categories = [1,2,3];
     //}]);
-    .controller('CategoryCtrl', ['$scope', '$state', 'Category', function ($scope, $state, Category) {
+    .controller('CategoryController', ['$scope', '$state', 'Category', function ($scope, $state, Category) {
         $scope.categories = [];
         function getCategories() {
             Category

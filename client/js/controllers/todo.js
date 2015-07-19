@@ -1,6 +1,6 @@
 angular
   .module('app')
-  .controller('TodoCtrl', ['$scope', '$state', 'Todo', function($scope,
+  .controller('TodoController', ['$scope', '$state', 'Todo', function($scope,
       $state, Todo) {
     $scope.todos = [];
     function getTodos() {
@@ -14,6 +14,7 @@ angular
     getTodos();
 
     $scope.addTodo = function() {
+      console.log($scope.newTodo);
       Todo
         .create($scope.newTodo)
         .$promise

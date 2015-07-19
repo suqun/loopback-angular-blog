@@ -11,11 +11,17 @@ angular
             .state('index', {
                 url: '',
                 templateUrl: 'views/article/list.html',
-                controller: 'ArticleCtrl'
+                controller: 'ArticleController'
             })
             .state('blogging', {
                 url: '/blogging',
-                templateUrl: 'views/article/blogging.html'
+                templateUrl: 'views/article/blogging.html',
+                controller: 'ArticleController'
+            })
+            .state('todo', {
+                url: '/todo',
+                templateUrl: 'views/todo.html',
+                controller: 'TodoController'
             });
 
 
