@@ -13,6 +13,16 @@ angular
                 templateUrl: 'views/article/list.html',
                 controller: 'ArticleController'
             })
+            .state('login', {
+                url: '/login',
+                templateUrl: 'views/user/login.html',
+                controller: 'UserController'
+            })
+            //.state('logout', {
+            //    url: '/logout',
+            //    templateUrl: 'views/user/login.html',
+            //    controller: 'UserController'
+            //})
             .state('blogging', {
                 url: '/blogging',
                 templateUrl: 'views/article/blogging.html',

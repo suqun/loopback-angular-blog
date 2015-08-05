@@ -29,7 +29,6 @@ angular
                 .create(newArticle)
                 .$promise
                 .then(function(aticle){
-                    console.log($setPristine());
                     console.log("a new article created");
 
                     //$scope.newArticle = '';

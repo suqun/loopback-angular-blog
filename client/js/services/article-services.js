@@ -5,7 +5,7 @@
 
     var module = angular.module("articleServices", ['ngResource']);
 
-    module.factory('Article', ['$resource', function ($resource) {
+    module.factory('Article', ['$resource', 'LoopBackAuth', function ($resource,LoopBackAuth) {
         return $resource('/article/:id',
             {'id': '@id'},
             {
